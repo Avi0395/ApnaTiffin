@@ -22,7 +22,7 @@ export default function MessInfo() {
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
           {messData.messName}
         </h2>
-        <p className="text-lg text-gray-700">
+        <p className="text-lg  text-gray-700">
           📍 <strong>Address:</strong> {messData.address}
         </p>
         <p className="text-lg text-gray-700">
