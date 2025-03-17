@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.apnatiffin.dto.CustomerDto;
+import com.apnatiffin.dto.customerdtos.CustomerRequestDto;
 import com.apnatiffin.service.CustomerService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,17 +19,5 @@ import org.springframework.web.bind.annotation.RequestBody;
 @CrossOrigin(origins = "http://localhost:5173")
 public class CustomerController {
 
-    @Autowired
-    CustomerService customerService;
-
-    @GetMapping
-    public ResponseEntity<List<CustomerDto>> getAllCustomers() {
-        return ResponseEntity.ok(customerService.getAllCustomers());
-    }
-
-    @PostMapping
-    public ResponseEntity<CustomerDto> addCustomer(@RequestBody CustomerDto customerDto) {
-        return ResponseEntity.status(201).body(customerService.addCustomer(customerDto));
-    }
-
+    
 }
